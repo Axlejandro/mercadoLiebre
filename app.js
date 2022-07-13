@@ -24,7 +24,7 @@ app.get('/register', (req,res)=>{
 app.get('/login', (req,res)=>{
     res.sendFile(__dirname + '/views/login.html');
 });
-
-app.listen(3000, ()=>{
-    console.log('Servidor funcionando en: http://localhost:3000');
+const port = process.env. PORT || 3000;
+app.listen(port, ()=>{
+    console.log('Servidor funcionando en: http://localhost:' + port);
 });
